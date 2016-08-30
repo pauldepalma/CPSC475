@@ -36,6 +36,19 @@ def re_show(pat_in, strg_in, mode,times):
         fout.write(str_out)
     else:
         print str_out
+        
+
+'''
+Another regex pattern matcher.  m below is referred to as a match object
+usage:
+  >>>from utils import re_find
+  >>>re_find('hello', hello world')
+'''
+def re_find(pattern, inString):
+  import re
+  m = re.search(pattern, inString)
+  if m:
+    print m.group()
 
 '''
   arg1 is the name of the corpus
