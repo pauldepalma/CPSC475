@@ -1,4 +1,6 @@
 '''
+  Function that marks strings found with a regular expression, writing the
+  output to re_show.txt 
   arg1 is the pattern to be matched
   arg2 is either the name of the file containing the string that is to be
     searched or the string itself
@@ -6,51 +8,60 @@
   arg4 is the number of matches to find. '0' finds all matches
   Usage:
     $pyton2.7
-    >>>from utils import re_show
+    >>>from utils import reShow
     >>>re_show('pat1','str1', 'f', 0)
-    writes a file, re_show.txt, containing the string stored str1 
+    writes a file, reShow.txt, containing the string stored str1 
     with all occurences of the regex pat1 marked.
 
     >>>re_show.py('a',"Mary Ann stopped by Mona's",'s' 1)
     displays the input string with the first instance of 'a' marked
 '''
 
-def re_show(pat_in, strg_in, mode,times):
+def reShow(patIn, strgIn, mode,times):
     import re
     if mode == 'f':
-        strg = open(strg_in).read()
-        pat = open(pat_in).readline().strip()
+        strg = open(strgIn).read()
+        pat = open(patIn).readline().strip()
     else:
-        strg = strg_in
-        pat = pat_in
-    pat_obj = re.compile(pat)
+        strg = strgIn
+        pat = patIn
+    patObj = re.compile(pat)
 
     #this curious syntax surrounds the pattern found by braces
     if (times > 0):
-        str_out = pat_obj.sub("{\g<0>}",strg,times)
+        strOut = patObj.sub("{\g<0>}",strg,times)
     else:
-         str_out = pat_obj.sub("{\g<0>}",strg)
+        strOut = patObj.sub("{\g<0>}",strg)
 
     if mode == 'f':
-        fout = open("re_show.txt","w")
-        fout.write(str_out)
+        fout = open("reShow.txt","w")
+        fout.write(strOut)
     else:
-        print str_out
-        
+        print strOut
 
 '''
-Another regex pattern matcher.  m below is referred to as a match object
-usage:
-  >>>from utils import re_find
-  >>>re_find('hello', hello world')
+  Function that finds a regex pattern in a string and displays the first
+  instance of the found pattern
 '''
-def re_find(pattern, inString):
-  import re
-  m = re.search(pattern, inString)
-  if m:
-    print m.group()
+def reFind(pattern,strgIn,mode):
+    import re
+    if mode == 'A':
+        m = re.findall(pattern,strgIn)
+    else:
+        m = re.search(pattern,strgIn)
+    if m:
+        return m
+    else:
+        print "No Match"
+      
+
+
+
+
+
 
 '''
+  Function that reads an nltk corpus and writes to a text file 
   arg1 is the name of the corpus
   arg2 is the name of the identifier within the corpus
   Usage:
@@ -67,8 +78,8 @@ def read_corpus(corpus,id):
     if corpus == 'gutenberg':
         from nltk.corpus import gutenberg
         sentences = gutenberg.sents(id)
-    sent_lst = [' '.join(sent) + '\n' for sent in sentences]
-    txt = ''.join(sent_lst)
+    sentLst = [' '.join(sent) + '\n' for sent in sentences]
+    txt = ''.join(sentLst)
     id = id.split('.')  #eliminate the final 'txt' from gutenberg files
     filename = id[0] + '.txt' 
     outfile = open(filename, 'w') 
