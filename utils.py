@@ -40,8 +40,9 @@ def reShow(patIn, strgIn, mode,times):
         print strOut
 
 '''
-  Function that finds a regex pattern in a string and displays the first
-  instance of the found pattern
+  Function that finds a regex pattern in a string and displays 
+  all instances of the found pattern if mode is 'A' otherwise
+  displays only the first instance 
 '''
 def reFind(pattern,strgIn,mode):
     import re
