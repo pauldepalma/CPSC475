@@ -41,8 +41,14 @@ def reShow(patIn, strgIn, mode,times):
         print strOut
 
 '''
+<<<<<<< HEAD
   Function that finds a regex pattern in a string and displays the first
   instance of the found pattern
+=======
+  Function that finds a regex pattern in a string and displays 
+  all instances of the found pattern if mode is 'A' otherwise
+  displays only the first instance 
+>>>>>>> 4457807cb08eae89a72db270fd0b7a0f54db64e9
 '''
 def reFind(pattern,strgIn,mode):
     import re
