@@ -28,6 +28,7 @@ def reShow(patIn, strgIn, mode,times):
     patObj = re.compile(pat)
 
     #this curious syntax surrounds the pattern found by braces
+    #notice that the sub function can be repurposed
     if (times > 0):
         strOut = patObj.sub("{\g<0>}",strg,times)
     else:
