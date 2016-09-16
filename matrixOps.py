@@ -3,7 +3,7 @@ Useful matrix operations for minimum edit distance
 Usage:
 cs-student->python2.7
 >>>from matrixOps import simpleOps
->>>simpleOps
+>>>simpleOps()
 '''
 
 
@@ -52,7 +52,7 @@ def simpleOps():
     print
 
     #change the values in the 1st column to 0 through 4
-    num3[:,0] = np.arange(0,5)
+    num3[:,1ma] = np.arange(0,5)
     print num3
     print
 
