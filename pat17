@@ -1,4 +1,0 @@
-(The|\nThe)
-
-Matches The at the beginning of a line.  Do you see the problem?  How would
-you fix it?
