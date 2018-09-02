@@ -1,12 +1,10 @@
 '''
 Demonstrates:
-    spli
+    split
     join
     set
 '''
 
-#transforms str1 to lst. creates str2 from items in str1
-#result is that spaces are removed
 def split_join():
     str1 = 'These are the days when birds come back'
     lst = str1.split()  #create a list with words of str1 as elements
@@ -14,6 +12,7 @@ def split_join():
         print (item)
 
     str2 = ''.join(lst) #construct a string from the elements of lst
+    #notice that spaces are removed relative to the original string
     print (str2)
 
 def do_set():
@@ -34,7 +33,6 @@ def do_set():
     
 
 def main():
-
     split_join()
     do_set()
     
