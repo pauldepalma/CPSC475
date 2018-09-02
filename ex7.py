@@ -5,9 +5,10 @@ Demonstrates
 '''
 
 def my_open():
+    print ("This program will ask you to enter the name of an existing file.")
+    print ("Be sure to put quotation marks around the file name")
     while(True):
-        #be sure to place quotes around entry when you type it
-        fin = input('Enter an input file name\n")
+        fin = input('Enter an input file name\n')
         try:
             fin = open(fin, 'r')
             break
