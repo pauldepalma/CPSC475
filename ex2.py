@@ -25,7 +25,7 @@ def gen_tosses(tosses):
             print(out_str + 'tails')
 
 def main():
-    tosses = int(input('Enter the number of tosses '))
+    tosses = int(raw_input('Enter the number of tosses '))
     gen_tosses(tosses)
     
 main()

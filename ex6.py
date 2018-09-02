@@ -29,8 +29,8 @@ def findPos(string,subStr):
         print "substring not found"
 
 def main():
-    string = input("Enter a string\n")
-    subStr = input("Enter a substring\n")
+    string = raw_input("Enter a string\n")
+    subStr = raw_input("Enter a substring\n")
     findPos(string,subStr)
     
     

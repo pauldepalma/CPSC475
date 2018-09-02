@@ -6,9 +6,9 @@ Demonstrates
 '''
 
 def main():
-    x = int(input("input an integer value for x\n"))
-    y = int(input("input an integer value for y\n"))
-    z = int(input("input an integer value for z\n"))
+    x = int(raw_input("input an integer value for x\n"))
+    y = int(raw_input("input an integer value for y\n"))
+    z = int(raw_input("input an integer value for z\n"))
     
     if (x > y):
         if (x > z):
