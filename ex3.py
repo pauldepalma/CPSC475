@@ -6,8 +6,8 @@ Demonstrates
 
 def main():
     
-    inner = int(input("Enter the inner value:  "))
-    outer = int(input("Enter the outer value:  "))
+    inner = int(raw_input("Enter the inner value:  "))
+    outer = int(raw_input("Enter the outer value:  "))
     
     item = ''
     for i in range(inner):

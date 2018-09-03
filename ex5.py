@@ -20,7 +20,7 @@ def make_list(size):
 
 def get_size():
     while(True):
-        size = int(input("How many items should I put in the list?  "))
+        size = int(raw_input("How many items should I put in the list?  "))
         if size < 1:
             print("Number of items must exceed 0.  Try again.")
         else:
@@ -29,7 +29,7 @@ def get_size():
 #Note the use of "in" with a tuple
 def get_direction():
     while(True):
-        direction = input("Print top to bottom or bottom to top (T/B)?  ")
+        direction = raw_input("Print top to bottom or bottom to top (T/B)?  ")
         print "Enclose response with single quotes as in 'T'"
         if direction not in ('T','B'):
             print("Direction must be T or B.  Try again.")
