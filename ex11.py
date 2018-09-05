@@ -1,1 +1,73 @@
-# Small Eliza simulationimport reimport sysdef doreply(instr):    instr = instr.lower()    if re.search(r'^hello|hi$', instr):        return 'Hi there!'    if re.search(r'\W(hate|despise|loathe)\W', instr):        return 'Wow! Those are some strong feelings you have! Tell me more...'    if re.search(r"^(are|aren't|what|where|who|when|is|isn't|why|how)\W", instr):        return 'good question!'    return "So, tell me something about your mother."def main():    print "Welcome! How may I help you? (type \"bye\" to quit.)\n"    while True:        # Read user's input        instr = raw_input("Patient: ")        instr = instr.lower()        if re.search(r'\bbye\b', instr):            print "Nice chatting with you!\n"            return 0        print doreply(instr)        print'''The folowing is considered good practice in a program that is intended to be runas a module.  It prevents the program from being run as an import into anotherprogramTry creating a program tst.py with the single line: import ex11You'll see that this program will not run.Now remove the first line, below, and move main() to the right margin. Now runtst.py.  This program will run.try printing the variable __name__it's value is set to __main__ when the program is called directly but to ex11when it is imported'''print __name__if __name__ == "__main__":    sys.exit(main())
+import re
+
+'''
+pre: string is a string
+post: returns a string containing all characters in string_in that are also
+    in good_chars, namely lower case alphabetic characters and spaces
+'''
+def tokenize(string_in):
+
+    string = re.sub('\n',' ', string_in)
+     #create a list containing all lower case characters
+    good_chars = [chr(value) for value in range(ord('a'),ord('z') + 1,1)]
+    good_chars.append(' ')
+    string = string.lower()
+    new_str = ''
+    for ch in string:
+        if ch in good_chars:
+            new_str = new_str + ch
+    return new_str
+
+'''
+pre: string_in is a string
+post: returns a dictionary where the key is an element of string_in and the
+    value is the number of times it appears in string_in
+'''
+def freq_table(string_in):
+    count_dict = {}
+    word_lst = string_in.split()
+    for word in word_lst:
+        if word in count_dict:
+            count_dict[word] = count_dict[word] + 1
+        else:
+            count_dict[word] = 1
+    return count_dict
+'''
+pre: count_dict is the dictionary created in the function freq_table
+post: writes the the key/value pairs of count_dict to a file
+'''
+def display_freq(count_dict,fout):
+    word_lst = list(count_dict.keys())
+    word_lst.sort()
+    fout.write("CHARACTER  FREQUENCY\n")
+    for word in word_lst:
+        fout.write(word + '\t\t' + str(count_dict[word]) + '\n')
+'''
+pre: none
+post: input and output files are opened and references returned
+'''
+def my_open():
+    while(True):
+        file_in = input('Enter an input file name\n')
+        try:
+            fin = open(file_in, 'r')
+            break
+        except:
+            print("Invalid file name, Try again")
+    file_out = input('Enter an output file name\n')
+    fout = open(file_out, 'w')
+    return fin, fout
+
+def main():
+    fin, fout = my_open()
+    contents_raw = fin.read()
+    contents_cooked = tokenize(contents_raw)
+    count_dict = freq_table(contents_cooked)
+    display_freq(count_dict, fout)
+    
+    fin.close()
+    fout.close()
+    
+    
+main()
+    
