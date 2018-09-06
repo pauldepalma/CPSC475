@@ -1,3 +1,11 @@
+'''
+Demonstrates:
+    list comprehension
+    dictionary
+    use of dictionary as frequency counter
+'''
+
+
 import re
 
 '''
