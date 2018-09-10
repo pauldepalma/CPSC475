@@ -1,7 +1,10 @@
 '''
 Demonstrates:
-    Plotting a function
-    For now, this requires python 3
+    Plotting a function with matplotlib
+    To install matplotlib from the command line using pip (pip is package manager for
+    python)
+    sudo apt-get install python-pip
+    python -mpip install -U matplotlib
 '''
 
 import matplotlib.pyplot as plt
