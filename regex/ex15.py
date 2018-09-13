@@ -2,11 +2,6 @@
 Demonstrates:
    Pickle is python's object serializer.  Pickle functions can write python objects to
    files and read pickle files into python objects.
-
-   Usage:
-   >>from ex15 import pickle
-   >>pickler()
-   >>depickler()
 '''
 
 import pickle
@@ -36,4 +31,8 @@ def depickler():
         print lst
 
     fin.close()
+    
+
+    
+    
     

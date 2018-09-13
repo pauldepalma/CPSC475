@@ -14,8 +14,8 @@ Demonstrates:
     *   gutenberg, a selection from the Gutenberg Corpus (www.gutenberg.org) a collection
         of 57,000 electronic texts
     *   inaugural, the U.S. presidential inaugural addresses
-    *   brown, the first 1,000,000 word electronic corpus (see http://icame.uib.no/brown/bcm-los.html for the
-        contents)
+    *   brown, the first 1,000,000 word electronic corpus 
+        (see http://icame.uib.no/brown/bcm-los.html for the contents)
 
     To find what's available in gutenberg:
     >>import nltk
@@ -34,9 +34,8 @@ Demonstrates:
     Usage:
         bring up a python shell
         >>>from ex12 import write_corpus
-        >>>read_corpus('brown','editorial')
+        >>>write_corpus('brown','editorial')
         writes a file, editorial.txt
-    
  '''
 
 def write_corpus(corpus,id):

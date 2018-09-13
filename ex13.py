@@ -1,8 +1,10 @@
 '''
 Demonstrates:
     Plotting a function with matplotlib
-    To install matplotlib from the command line using pip (pip is package manager for
+    Install matplotlib from the command line using pip (pip is package manager for
     python)
+
+To install matlib, bring up a terminal window:
     sudo apt-get install python-pip
     python -mpip install -U matplotlib
 '''
