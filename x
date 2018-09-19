@@ -1,0 +1,9 @@
+CHARACTER  FREQUENCY
+are		1
+back		1
+come		1
+days		1
+the		1
+these		1
+when		1
+words		1

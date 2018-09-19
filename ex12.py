@@ -49,13 +49,26 @@ def write_corpus(corpus,id):
     if corpus == 'inaugural':
         from nltk.corpus import inaugural
         sentences = inaugural.sents(id)
-    
-    sentLst = [' '.join(sent) + '\n' for sent in sentences]
+
+    #sentences is a list of sentences from each inaugural address where
+    #each sentence is a list of words
+
+
+    #transform the corpus to a list of words
+    sentLstU = [' '.join(sent) + '\n' for sent in sentences]
+
+    #transform the unicode encoded list of words to ascii
+    sentLst = [item.encode('ascii','ignore') for item in sentLstU]
+
+    #transform the list of words to a string
     txt = ''.join(sentLst)
+    
+    
+    
     id = id.split('.')  #eliminate the final 'txt' from some corpora
-    filename = id[0] + '.txt' 
+    filename = str(id[0]) + '.' + str(id[1])
     outfile = open(filename, 'w') 
-    outfile.write(txt)
+    outfile.write(txt) 
     outfile.close()
 
 
