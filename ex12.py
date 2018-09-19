@@ -53,10 +53,10 @@ def write_corpus(corpus,id):
     #sentences is a list of sentences from each inaugural address where
     #each sentence is a list of words
 
-
     #transform the corpus to a list of words
     sentLstU = [' '.join(sent) + '\n' for sent in sentences]
 
+    #this line is new
     #transform the unicode encoded list of words to ascii
     sentLst = [item.encode('ascii','ignore') for item in sentLstU]
 
