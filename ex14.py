@@ -56,11 +56,13 @@ def reFind(pattern,strgIn,mode):
     import re
     if mode == 'A':
         m = re.findall(pattern,strgIn)
-        return m
+        if m:
+          return m
     else:
         m = re.search(pattern,strgIn)
-        return m.group()
+        if m:
+          return m.group()
     
-    print 'No Match'
+    return 'No Match'
 
 
