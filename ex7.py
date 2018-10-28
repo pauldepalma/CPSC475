@@ -1,4 +1,4 @@
-'''
+
 Demonstrates
     file operations: open, close, read entire file, read a line at a time
     testing for file existence
@@ -8,7 +8,7 @@ def my_open():
     print ("This program will ask you to enter the name of an existing file.")
     print ("Be sure to put quotation marks around the file name")
     while(True):
-        fin = input('Enter an input file name\n')
+        fin = raw_input('Enter an input file name\n')
         try:
             fin = open(fin, 'r')
             break
