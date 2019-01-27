@@ -1,3 +1,5 @@
+#a version of the classic eliza
+
 import sys
 import re
 def doreply(instr):
