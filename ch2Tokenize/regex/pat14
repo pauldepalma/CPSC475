@@ -1,3 +1,0 @@
-Column [0-9]+
-
-Matches any sequence of Column followed by a number of any length.

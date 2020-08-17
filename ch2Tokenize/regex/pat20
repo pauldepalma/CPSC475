@@ -1,3 +1,0 @@
-The (.*)er they are, the \1er they will be.
-
-Matches the entire string only if the first regex pattern is the same as the second
