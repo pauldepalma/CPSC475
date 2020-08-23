@@ -1,6 +1,8 @@
 '''
 Demonstrates:
     Extracting text from NLTK corpora
+
+    see also: www.nltk.org/book/ch02.html ("Accessing Text Corpora and Lexical Resources")
     
     To load corpora:
     Bring up a python shell
@@ -12,7 +14,7 @@ Demonstrates:
 
     The three corpora we will use are:
     *   gutenberg, a selection from the Gutenberg Corpus (www.gutenberg.org) a collection
-        of 57,000 electronic texts
+        of 57,000 electronic texts (http://www.gutenberg.org)
     *   inaugural, the U.S. presidential inaugural addresses
     *   brown, the first 1,000,000 word electronic corpus 
         (see http://icame.uib.no/brown/bcm-los.html for the contents)
@@ -38,37 +40,28 @@ Demonstrates:
         writes a file, editorial.txt
  '''
 
-def write_corpus(corpus,id):
+def write_corpus(which,id):
     import nltk
-    if corpus == 'brown':
+    if which == 'brown':
         from nltk.corpus import brown
-        sentences = brown.sents(categories=id)
-    if corpus == 'gutenberg':
+        sentences = brown.sents(categories = id)
+    if which == 'gutenberg':
         from nltk.corpus import gutenberg
         sentences = gutenberg.sents(id)
-    if corpus == 'inaugural':
+    if which == 'inaugural':
         from nltk.corpus import inaugural
         sentences = inaugural.sents(id)
 
-    #sentences is a list of sentences from each inaugural address where
-    #each sentence is a list of words
+    #sentences is a list of sentences where each sentence is a list of words
 
     #transform the corpus to a list of words
-    sentLstU = [' '.join(sent) + '\n' for sent in sentences]
-
-    #this line is new
-    #transform the unicode encoded list of words to ascii
-    sentLst = [item.encode('ascii','ignore') for item in sentLstU]
-
-    #transform the list of words to a string
-    txt = ''.join(sentLst)
+    lst = [' '.join(sent) + '\n' for sent in sentences]
+    text = ' '.join(lst)
     
     
-    
-    id = id.split('.')  #eliminate the final 'txt' from some corpora
-    filename = str(id[0]) + '.' + str(id[1])
+    filename = which + '.' + id
     outfile = open(filename, 'w') 
-    outfile.write(txt) 
+    outfile.write(text) 
     outfile.close()
 
 
