@@ -1,22 +1,23 @@
 '''
 Demonstrates:
-   Reading a CSV file into a numpy array using comman line arguments
-   ->python ex15.py matA.csv
-   
+    Plotting a function with matplotlib
+    Install matplotlib from the command line using pip (pip is package manager for
+    python)
+
+To install matlib, bring up a terminal window
+
+    puthon-m pip install --upgrade pip
+    python -m pip install -U matplotlib
 '''
 
-from numpy import genfromtxt
-import sys
+import matplotlib.pyplot as plt
 
 
 def main():
-    fin = sys.argv[1]
-    result = genfromtxt(fin,delimiter=',')
-    
-    print (fin)
-    print (result)    #print the array
-    print (result[0])  #print the 0th row
-    print (result[1][3])  #print the cell in the 1st row 3rd col, .01
-   
+    x = [i for i in range(0,100)]
+    y = [i**2 for i in x]
+    plt.plot(x,y)
+    plt.show()
     
 main()
+    
