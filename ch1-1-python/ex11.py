@@ -4,16 +4,16 @@ Demonstrates:
    objects to files and read pickle files into python objects.
 
    Usage:
-   >>from ex11 import pickle
+   >>from ex11 import pickler
    >>pickler()
+   >>from ex11 import depickler
    >>depickler()
 '''
 
 import pickle
 
-
 def pickler():
-    lsts_out = [ [i for i in range(10)] for j in range(5)]
+    lsts_out = [ [i for i in range(10)] for j in range(5)] #a list of 5 lists, each containing 0 .. 9
 
     print ("original list")
     for lst in lsts_out:
