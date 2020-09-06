@@ -35,7 +35,7 @@ def get_data():
             break
 
     while(True):
-        direction = input("Print top to bottom or bottom to top (T/B)?  \n")
+        direction = input("Print top to bottom or bottom to top (T/B on VM, 'T'/'B' on grace)?  \n")
         if direction not in ('T','B'):
             print("Direction must be T or B.  Try again.")
         else:
