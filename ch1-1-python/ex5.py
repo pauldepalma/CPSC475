@@ -21,7 +21,7 @@ def make_list(size):
     return lst
     '''
     #A more pythonic way. called a "list comprehension"
-    #not the set builder constuction
+    #note the set builder constuction
     return [random.randint(LOW,HIGH) for i in range(size)]
     
 
