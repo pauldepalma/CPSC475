@@ -1,4 +1,4 @@
 \^
 
 
-#escape the literal '\' looking for all '^'
+#escape the regex meaning for '^'. match '^' 

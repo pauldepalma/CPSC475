@@ -1,4 +1,4 @@
 \.
 
-Escape the normal meaning of .
+Escape the regex of .
 use \\. when not in a file

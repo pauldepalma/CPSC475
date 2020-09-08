@@ -1,4 +1,4 @@
 beg.n
 
 
-beg followed by any character followed by n
+match beg followed by any character followed by n

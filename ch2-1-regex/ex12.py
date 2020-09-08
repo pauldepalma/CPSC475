@@ -12,9 +12,9 @@
   Usage:
     Bring up a python shell
     >>>from ex12 import reSub
-    >>>reFind('pat1','str1', 'f')
-    writes a file, reSub.txt, containing the string stored str1 
-    with all occurences of the regex pat1 marked.
+    >>>reSub('pat1','str1', 'f')
+    writes a file, reSub.txt, containing the string stored in str1 
+    with all occurences of the regex in at1 marked.
 '''
 def reSub(patIn, strgIn, mode):
     import re
@@ -26,6 +26,9 @@ def reSub(patIn, strgIn, mode):
     #MULTILINE tells ^ and $ to look at the beginnings and endings of all lines
     patObj = re.compile(pat,re.MULTILINE)
     strOut = patObj.sub('{\g<0>}',strg)  #\g<0> is the character group matched
+
+    #not compiled version. produces same output as previous line
+    #strOut = re.sub(pat,'{' + pat + '}',strg)  
     
     if mode == 'f':
         fout = open("reSub.txt","w")
@@ -40,8 +43,7 @@ def reSub(patIn, strgIn, mode):
 
 '''
   Function that finds a regex pattern in a string and displays 
-  all instances of the found pattern if mode is 'A' otherwise
-  displays only the first instance
+  one or all instances of the found pattern.
   arg1: regex pattern
   arg2: string
   arg3: 'A' for all occurrences, 'F' for the first occurrence

@@ -1,3 +1,4 @@
-\$[0-9]*\.([0-9][0-9])*
+\$[0-9]*\.([0-9][0-9]){0,1}
 
-Match a price anywhere
+
+Match a price, but there are problems. Can you fix them? 
