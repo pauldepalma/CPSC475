@@ -1,0 +1,1 @@
+for example compressed and compression are both accepted as equivalent to compress

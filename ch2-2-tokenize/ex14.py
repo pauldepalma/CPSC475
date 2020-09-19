@@ -6,7 +6,7 @@ Demonstrates:
 
 To install matlib, bring up a terminal window
 
-    puthon-m pip install --upgrade pip
+    python-m pip install --upgrade pip
     python -m pip install -U matplotlib
 '''
 
