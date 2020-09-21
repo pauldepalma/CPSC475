@@ -1,3 +1,10 @@
+'''
+Simple Eliza program
+To execute:
+    >>csuser ->python3 eliza.py
+'''
+
+
 import sys
 import re
 def doreply(instr):
