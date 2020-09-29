@@ -1,4 +1,4 @@
-
+#Based on:
 #Numerical Python Course
 #python-course.eu/weighted_choice_and_sample.php
 
@@ -22,6 +22,7 @@ def main():
     outcomes = [weighted_choice.make_choice(cities, populations) for i in range(n)]
 
     #tot up the number of times each city was chosen
+    #outcome is a list of n cities (in the city example)
     ct = Counter(outcomes)
 
     for key in ct:
