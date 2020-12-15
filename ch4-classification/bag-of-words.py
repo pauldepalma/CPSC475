@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 def main():
     
     reviews = movie_reviews.words() #all words from all reviews
-    print("words in reviews " + str(len(reviews)))
+    print("number of words in reviews: " + str(len(reviews)))
     print(movie_reviews.categories()) #positive and negative
     pos = movie_reviews.fileids() #all reviews
     posLst = movie_reviews.fileids('pos') #all  positive reviews
