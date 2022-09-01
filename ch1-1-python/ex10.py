@@ -1,7 +1,7 @@
 '''
 Demonstrates:
-   the use of command line arguments
-   usage: computer-science-> python ex10.py source target
+   the use of command line arguments in a program invoked from the command line
+   usage: python3 ex10.py source target
 '''
 
 import sys

@@ -18,8 +18,8 @@ TAILS = 1
 
 def gen_tosses(tosses):
     for toss in range(tosses):
-        out_str = 'Toss ' + str(toss + 1) + '\t'    #notice the tab character
-        if random.randint(HEADS,TAILS) == HEADS:
+        out_str = 'Toss ' + str(toss + 1) + '\t'  #notice the tab character
+        if random.randint(HEADS,TAILS) == HEADS:  #range: [0,1]
             print(out_str + 'heads')
         else:
             print(out_str + 'tails')

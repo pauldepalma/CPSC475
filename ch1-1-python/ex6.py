@@ -16,7 +16,7 @@ def searchSub(string,subStr,posStr_in):
 
 def findPos(string,subStr):
     posStr = 0
-    lastSub = len(string) - len(subStr)
+    lastSub = len(string) - len(subStr) #position of last possible substring
 
     while (posStr <= lastSub):
         pos = searchSub(string,subStr,posStr)

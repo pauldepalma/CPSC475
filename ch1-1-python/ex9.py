@@ -18,7 +18,8 @@ def tokenize(string_in):
 
     #substitute space for eol characger
     string = re.sub('\n',' ', string_in)
-     #create a list containing all lower case characters
+
+    #create a list containing all lower case characters
     good_chars = [chr(value) for value in range(ord('a'),ord('z') + 1,1)]
     good_chars.append(' ')
     string = string.lower()
