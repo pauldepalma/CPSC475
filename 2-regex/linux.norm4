@@ -7,4 +7,5 @@
 # sort the output again, this time numerically and in reverse order 
 # where $1 is the name of the file from the command line
 
-tr -c 'A-Za-z' '\n' < austen-sense.txt | tr A-Z a-z | sort | uniq -c | sort -n -r
+tr -c 'A-Za-z' '\n' < $1  | tr A-Z a-z | sort | uniq -c | sort -n -r
+

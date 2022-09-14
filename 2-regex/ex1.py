@@ -11,7 +11,7 @@
   arg3: 'f' write output to reSub.txt. 's' write output to screen
   Usage:
     Bring up a python shell
-    >>>from ex12 import reSub
+    >>>from ex1 import reSub
     >>>reSub('pat1','str1', 'f')
     writes a file, reSub.txt, containing the string stored in str1 
     with all occurences of the regex in at1 marked.
