@@ -27,5 +27,5 @@ def main():
             return 0
         print (doreply(instr))
         print()
-if __name__ == "__main__":
-    sys.exit(main())
+
+main()
