@@ -1,0 +1,11 @@
+# replace each non-alphabetic character with eol
+# if there is a sequence of non-alpha chars, replace only the first
+# with eol but eliminate the others.  That is, squeeze them  
+# of each line.
+# transform UC to lc
+# sort the output, eliminate but count duplicates      
+# sort the output again, this time numerically and in reverse order 
+# where $1 is the name of the file from the command line
+
+tr -c 'A-Za-z' '\n' < $1  | tr A-Z a-z | sort | uniq -c | sort -n -r
+

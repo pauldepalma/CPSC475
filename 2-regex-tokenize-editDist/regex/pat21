@@ -1,0 +1,11 @@
+\w+[\w\.]*\@[\w\.]+[a-z]{3}
+
+This gets most, but not all email addresses:
+
+any sequence of the following sequence
+    "word characters" followed by .
+followed by @
+followed by any sequence of the following sequence
+    "word characters" followed by .
+followed by 3 alphabetic characters
+

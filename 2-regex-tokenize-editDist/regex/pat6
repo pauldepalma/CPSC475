@@ -1,0 +1,4 @@
+\.
+
+Escape the regex of .
+use \\. when not in a file

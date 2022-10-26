@@ -1,4 +1,0 @@
-\s\$[0-9]*\.([0-9][0-9]){0,1}[^0-9]
-
-
-Match a price, but there are problems. Can you fix them? 

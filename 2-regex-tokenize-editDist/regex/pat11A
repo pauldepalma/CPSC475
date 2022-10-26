@@ -1,0 +1,3 @@
+The dog$
+
+Matches the string that contains only 'The dog' at the end of a line

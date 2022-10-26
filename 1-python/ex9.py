@@ -36,7 +36,6 @@ post: returns a dictionary where the key is an element of string_in and the
 '''
 def freq_table(string_in):
     word_lst = string_in.split()
-    '''
     count_dict = {}
     for word in word_lst:
         if word in count_dict:
@@ -44,9 +43,8 @@ def freq_table(string_in):
         else:
             count_dict[word] = 1
     return count_dict
-    '''
-    #A more pythonic way to do the same thing
-    return Counter(word_lst)
+    #Another, but less transparent way
+    #return Counter(word_lst)
    
 
 '''

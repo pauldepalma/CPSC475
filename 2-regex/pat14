@@ -1,3 +1,0 @@
-Column [0-9]+
-
-Matches 'Column' followed by any digit string 

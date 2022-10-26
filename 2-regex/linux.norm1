@@ -1,6 +1,0 @@
-# replace each non-alphabetic character with eol
-# if there is a sequence of non-alpha chars, replace only the first
-# with eol but eliminate the others.    
-#where $1 is the file name from the command line    
-#Usage: ./linux.norm1 mytext.txt
-tr -sc 'A-Za-z' '\n' < $1 

@@ -1,0 +1,3 @@
+fish(y|es|ed)
+
+matches occurence of fishy, fishes, fished
