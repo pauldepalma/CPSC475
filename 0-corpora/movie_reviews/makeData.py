@@ -67,16 +67,13 @@ def main():
     neg, negTst = makeReviewLsts('neg',testFract)
 
     posBagOfWords = makeBagOfWords(pos)
-    posTstBagOfWords = makeBagOfWords(posTst)
-
     negBagOfWords = makeBagOfWords(neg)
-    negTstBagOfWords = makeBagOfWords(negTst)
 
     writeFile('pos.txt',posBagOfWords)
-    writeFile('posTst.txt',posTstBagOfWords)
-
     writeFile('neg.txt',negBagOfWords)
-    writeFile('negTst.txt',negTstBagOfWords)
+    
+    writeFile('posTst.txt',posTst)
+    writeFile('negTst.txt',negTst)
         
     
 main()

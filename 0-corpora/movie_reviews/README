@@ -5,6 +5,8 @@ pos.txt: positive reviews training set
 negTst.txt negative reviews test set
 negTst.txt negative reviews test set
 
-The positive training set was built from 90% of total NLTK positive reviews
-The positive test set was built from the remaining 10% of NLTK positive reviews
-negative reviews were treated in the same way
+The positive training set was built from a randomly chosen 90% of total NLTK positive 
+reviews
+The positive test set contains the file names of the remaining 10% of positive reviews 
+
+The negative training and test sets were build in the same way
