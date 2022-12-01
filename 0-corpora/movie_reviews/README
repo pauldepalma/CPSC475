@@ -1,0 +1,10 @@
+Created from NLTK corpus, movie_reviews
+using makeData.py, written 11/30/2022
+pos.txt: positive reviews training set
+pos.txt: positive reviews training set
+negTst.txt negative reviews test set
+negTst.txt negative reviews test set
+
+The positive training set was built from 90% of total NLTK positive reviews
+The positive test set was built from the remaining 10% of NLTK positive reviews
+negative reviews were treated in the same way
