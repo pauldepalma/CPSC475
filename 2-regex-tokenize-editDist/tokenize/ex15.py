@@ -48,14 +48,8 @@ def tokenize(text):
 
 
 def count_words(word_lst):
-    '''
-    word_dict = {}
-    for word in word_lst:
-        if word in word_dict:
-            word_dict[word] = word_dict[word] + 1
-        else:
-            word_dict[word] = 1
-    '''
+
+    #it's more fun to do this with a dictionary
 
     word_dict = Counter(word_lst)
     
